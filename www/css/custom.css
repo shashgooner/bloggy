@@ -1,0 +1,120 @@
+
+body {
+    background-color: #1cbb9b;
+}
+
+.register-login-box {
+    position:relative;
+    margin: 10px auto;
+    width: 500px;
+    min-height: 550px;
+    height: auto;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
+    -moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
+    box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
+}
+
+.lb-header {
+    position:relative;
+    color: #00415d;
+    margin: 5px 5px 10px 5px;
+    padding-bottom:10px;
+    border-bottom: 1px solid #eee;
+    text-align:center;
+    height:28px;
+}
+
+.lb-header a {
+    margin: 0 25px;
+    padding: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+    color: #029f5b;
+    font-size: 18px;
+}
+
+.register-login-form {
+    position:relative;
+    float: left;
+    width: 100%;
+    height:auto;
+    margin-top: 20px;
+    text-align:center;
+}
+
+.u-form-group {
+    width:100%;
+    margin-bottom: 10px;
+}
+
+.u-form-group input[type="email"],
+.u-form-group input[type="password"],
+.u-form-group input[type="text"] {
+    width: calc(50% - 22px);
+    height:45px;
+    outline: none;
+    border: 1px solid #ddd;
+    padding: 0 10px;
+    border-radius: 2px;
+    color: #333;
+    font-size:0.8rem;
+    -webkit-transition:all 0.1s linear;
+    -moz-transition:all 0.1s linear;
+    transition:all 0.1s linear;
+}
+
+.u-form-group input:focus {
+    border-color: #358efb;
+}
+
+.u-form-group button {
+    width:50%;
+    background-color: #1CB94E;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 14px 0;
+    border-radius: 2px;
+    text-transform: uppercase;
+}
+
+.card {
+    background: #fff;
+    border-radius: 2px;
+    margin: 1rem auto;
+    position: relative;
+    width: 400px;
+    padding: 2px;
+    word-wrap: break-word;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    font-family: sans-serif;
+}
+
+.card h1 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.card h2 {
+    font-size: 1rem;
+    text-align: center;
+}
+br {line-height: 0.1; content: " "} 
+
+.pagination {
+    text-align: center;
+    margin: 1rem auto;
+    font-size: 1.3rem; 
+}
+
+.page_number:hover, .page_current {
+    background-color: rgb(255, 255, 255);
+}

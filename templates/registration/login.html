@@ -1,0 +1,37 @@
+{% load static %}
+
+<title>{% block title %}Login{% endblock %}</title>
+
+{% block content %}
+<div class="register-login-box">
+    <div class="lb-header">
+        <a class="active" id="login-box-link">Login</a>
+    </div>
+   {% for message in messages %}
+        <p>{{ message }}</p>
+    {% endfor %}
+    <form method="post" class="register-login-form">
+        {% csrf_token %}
+        {% for field in form %}
+            <div class="u-form-group">
+                <label for="{{ field.id_for_label }}">
+                {{ field.label }}<br>
+                </label>
+                {{ field }}
+            </div>
+            {% for error in field.errors %}
+                <p style="color: red">{{ error }}</p>
+            {% endfor %}
+        {% endfor %}
+        <div class="u-form-group">
+            <button type="submit">Login</button>
+        </div>
+    </form>
+    <p>
+        Don't have an account?
+        <a href="{% url 'register' %}">Register for free</a>.
+    </p>
+</div>
+{% endblock %}
+
+<link rel="stylesheet" href="{% static 'css/custom.css' %}">
