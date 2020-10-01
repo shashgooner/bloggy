@@ -1,6 +1,7 @@
+{% extends "base.html" %}
 {% load static %}
 
-<title>{% block title %}Login{% endblock %}</title>
+{% block title %}Login{% endblock title %}
 
 {% block content %}
 <div class="register-login-box">
@@ -32,6 +33,4 @@
         <a href="{% url 'register' %}">Register for free</a>.
     </p>
 </div>
-{% endblock %}
-
-<link rel="stylesheet" href="{% static 'css/custom.css' %}">
+{% endblock content %}

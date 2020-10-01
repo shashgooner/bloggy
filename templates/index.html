@@ -1,6 +1,7 @@
+{% extends "base.html" %}
 {% load static %}
 
-<title>{% block title %}Bloggy{% endblock %}</title>
+{% block title %}Home - Bloggy{% endblock title %}
 
 {% block content %}
 <form action="{% url 'logout' %}" method="post" style="padding: 0">
@@ -20,7 +21,7 @@
         <h2>{{post.author.username}}</h2>
         <hr>
         {{post.body|truncatewords:50|safe}}
-        {% if post.body|length > 50%}
+        {% if post.body|length > 50 %}
         <a href="{%url 'post-detail' post.id %}">Read more</a>
         {% endif %}
     </div>
@@ -37,6 +38,4 @@
         {%endif%}
     {% endfor%}
 </div>
-{% endblock %}
-
-<link rel="stylesheet" href="{% static 'css/custom.css' %}">
+{% endblock content %}

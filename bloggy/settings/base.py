@@ -13,7 +13,9 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+)
 
 
 # Quick-start development settings - unsuitable for production
@@ -23,9 +25,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get("SECRET_KEY", None)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['django.notmuchstuff.com', '139.59.18.211', 'localhost']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -76,13 +78,9 @@ WSGI_APPLICATION = "bloggy.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": "blogs",
-        "USER": "shashwat",
-        "PASSWORD": os.environ.get("DJANGO_DB_PASSWORD", None),
-        "HOST": "blog-db-do-user-8042349-0.b.db.ondigitalocean.com",
-        "PORT": "25060",
-    },
+        "ENGINE": "django.db.backends.",
+        "NAME": "",
+    }
 }
 
 

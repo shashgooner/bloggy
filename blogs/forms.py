@@ -1,7 +1,7 @@
 from django import forms
-from blogs.models import Post
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import get_user_model
+from trix.widgets import TrixEditor
+from blogs.models import Post
 
 User = get_user_model()
 
@@ -10,6 +10,9 @@ class PostForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = ("title", "body")
+        widgets = {
+            "body": TrixEditor,
+        }
 
 
 class LoginForm(forms.Form):
@@ -18,6 +21,7 @@ class LoginForm(forms.Form):
 
 
 class RegisterForm(forms.Form):
+    username = forms.CharField(max_length=20, required=True)
     first_name = forms.CharField(max_length=30, required=True)
     last_name = forms.CharField(max_length=30, required=True)
     email = forms.EmailField(label="Email-Id")
