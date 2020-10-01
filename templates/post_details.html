@@ -1,5 +1,14 @@
-<h1>{{post.title}}</h1>
-<h2>By {{post.author.username}} on {{post.date|date:"M d, Y"}}</h2>
-<hr>
-<br>
-{{post.body}}
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Detailed Blog{% endblock title %}
+
+{% block content %}
+<div class="card" style="width:auto">
+    <h1>{{post.title}}</h1>
+    <h2>By {{post.author.username}} on {{post.date|date:"M d, Y"}}</h2>
+    <hr>
+    <br>
+    {{post.body|safe}}
+</div>
+{% endblock content%}
