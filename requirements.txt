@@ -1,0 +1,6 @@
+Django==3.1.1
+mysqlclient==2.0.1
+pylint==2.6.0
+pylint-django==2.3.0
+pylint-plugin-utils==0.6
+django-trix==0.3.0
