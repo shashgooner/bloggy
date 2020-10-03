@@ -1,4 +1,5 @@
 djangoenv
 .vscode
 *.pyc
-.pylintrc 
+.pylintrc
+prodenv 
